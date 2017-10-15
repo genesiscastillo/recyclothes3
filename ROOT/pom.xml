@@ -4,13 +4,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <artifactId>recyclothes3</artifactId>
-        <groupId>recyclothes3</groupId>
-        <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
-
     <groupId>recyclothes3</groupId>
     <artifactId>ROOT</artifactId>
     <version>1.0.0</version>
