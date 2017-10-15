@@ -6,7 +6,6 @@
     <groupId>recyclothes3</groupId>
     <artifactId>recyclothes3</artifactId>
     <version>1.0.0</version>
-
     <packaging>pom</packaging>
 
     <name>recyclothes3</name>
