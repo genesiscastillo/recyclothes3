@@ -1,34 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>recyclothes3</groupId>
-  <artifactId>recyclothes3</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <name>recyclothes3</name>
-  <modules>
-    <module>ROOT</module>
-  </modules>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
-    <version.jboss.bom>8.2.1.Final</version.jboss.bom>
-    <version.wildlfly.bom>11.0.0.CR1</version.wildlfly.bom>
-    <version.compiler.plugin>3.1</version.compiler.plugin>
-    <version.ear.plugin>2.10</version.ear.plugin>
-    <version.ejb.plugin>2.3</version.ejb.plugin>
-    <version.surefire.plugin>2.16</version.surefire.plugin>
-    <version.war.plugin>2.5</version.war.plugin>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>org.wildfly.bom</groupId>
-      <artifactId>wildfly</artifactId>
-      <version>${version.wildlfly.bom}</version>
-      <type>pom</type>
-    </dependency>
-  </dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>recyclothes3</groupId>
+    <artifactId>recyclothes3</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>pom</packaging>
+
+    <name>recyclothes3</name>
+
+    <modules>
+        <module>ROOT</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
+        <version.jboss.bom>8.2.1.Final</version.jboss.bom>
+        <version.wildlfly.bom>11.0.0.CR1</version.wildlfly.bom>
+        <version.compiler.plugin>3.1</version.compiler.plugin>
+        <version.ear.plugin>2.10</version.ear.plugin>
+        <version.ejb.plugin>2.3</version.ejb.plugin>
+        <version.surefire.plugin>2.16</version.surefire.plugin>
+        <version.war.plugin>2.5</version.war.plugin>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wildfly.bom</groupId>
+            <artifactId>wildfly</artifactId>
+            <version>${version.wildlfly.bom}</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
 
 </project>
