@@ -30,7 +30,7 @@ public class AccesoBD {
     public Connection getConnection(){
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/web","adminvlRnXQp", "3isUfI-lcxI7");
+            connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/web","genesis", "genesis");
         } catch (SQLException e) {
             LOGGER.error("Connection Failed! Check output console "+e.getMessage());
         }
