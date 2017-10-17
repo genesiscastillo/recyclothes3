@@ -1,0 +1,6 @@
+recyclothes3\web\dao\AccesoBD.class
+recyclothes3\web\dao\FotoProductoDAOImpl.class
+recyclothes3\web\entities\FotoProducto.class
+recyclothes3\web\dao\FotoProductoDAO.class
+recyclothes3\web\servlet\ImageServlet.class
+recyclothes3\web\websocket\FotoProductoWebSocket.class

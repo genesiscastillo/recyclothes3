@@ -9,8 +9,11 @@ import java.net.URI;
  */
 @ClientEndpoint
 public class GsonTest {
+
+    private Session session;
     enum Connect {
-        LOCALHOST_8080("ws://localhost:8080/RecyclothesEAR-cdi/adminWebSocket"),
+        //LOCALHOST_8080("ws://localhost:8080/RecyclothesEAR-cdi/adminWebSocket"),
+        LOCALHOST_8080("ws://localhost/fotoProductoWebSocket"),
         WWW_RECYCLOTHES_CL("ws://web-babycaprichitos.rhcloud.com:8000/RecyclothesEAR-cdi/adminWebSocket");
 
         private String url;
@@ -23,7 +26,9 @@ public class GsonTest {
     }
 
     public static void main(String... args){
-        System.out.print("HOLA GSON TEST");
+        System.out.println("HOLA GSON TEST");
+        GsonTest gsonTest = new GsonTest();
+        gsonTest.connectToWebSocket(Connect.LOCALHOST_8080.getUrl());
     }
     private void connectToWebSocket(String urlEndpointWebSocket) {
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
@@ -37,19 +42,29 @@ public class GsonTest {
     }
     @OnMessage
     public void handlerMessage(String message)  {
-
+        System.out.println("RECIBIENDO "+message);
     }
 
     @OnOpen
     public void open(Session session){
-
+        this.session = session;
+        System.out.println("ENVIANDO....!!");
+        sendMessage("SEND HOLA MUNDO");
     }
     @OnClose
     public void close(){
-
+        System.out.println("Close");
     }
     @OnError
     public void error(Throwable throwable){
+        System.err.println(throwable.getMessage());
+    }
 
+    public void sendMessage(String message) {
+        try {
+            this.session.getBasicRemote().sendText(message);
+        }catch(IOException e){
+            System.err.println(e.getMessage());
+        }
     }
 }
