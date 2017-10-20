@@ -12,8 +12,8 @@ public class GsonTest {
 
     private Session session;
     enum Connect {
-        //LOCALHOST_8080("ws://localhost:8080/RecyclothesEAR-cdi/adminWebSocket"),
-        LOCALHOST_8080("ws://localhost/fotoProductoWebSocket"),
+        LOCALHOST_8080("ws://root-recyclothes3.a3c1.starter-us-west-1.openshiftapps.com/fotoProductoWebSocket"),
+        //LOCALHOST_8080("ws://localhost/fotoProductoWebSocket"),
         WWW_RECYCLOTHES_CL("ws://web-babycaprichitos.rhcloud.com:8000/RecyclothesEAR-cdi/adminWebSocket");
 
         private String url;
